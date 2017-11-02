@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug" strict="true" name="XMLConfigTest"
+               packages="org.apache.logging.log4j.test">
+ 
+  <Appenders>
+    <Appender type="Console" name="console">
+      <Layout type="PatternLayout" pattern="%d{dd/MM/yyyy HH:mm:ss,SSS} - %c{1}:%L - %m %n"/>
+    </Appender>
+  </Appenders>
+ 
+  <Loggers>
+    <Logger name="com.imatz.toto.util.event" level="INFO" additivity="false">
+      <AppenderRef ref="console"/>
+    </Logger>
+ 
+    <Root level="INFO">
+      <AppenderRef ref="console"/>
+    </Root>
+  </Loggers>
+ 
+</Configuration>
